@@ -39,5 +39,13 @@ def auto_answer():
     return render_template('auto_answer.html', **param)
 
 
+# 6 По каютам!
+@app.route("/distribution")
+def distribution():
+    astronauts = ['Ридли Скотт', 'Энди Уир', 'Марк Уотни', 'Венката Капур',
+                  'Тедди Сандерс', 'Шон Бин']
+    return render_template('distribution.html', astronauts=astronauts)
+
+
 if __name__ == '__main__':
     app.run(port=8080, host='127.0.0.1', debug=True)
